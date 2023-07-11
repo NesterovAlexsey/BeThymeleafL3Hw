@@ -17,7 +17,7 @@
       <td th:utext="${event.name}">...</td>
       <td th:utext="${event.city}">...</td>
       <td>
-        <form th:action="@{/delete}" th:method="DELETE">
+        <form th:action="@{/delete}" th:method="POST">
           <input type="hidden" name="id" th:value="${events.indexOf(event)}">
           <button>delete</button>
         </form>
