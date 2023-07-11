@@ -22,10 +22,6 @@ public class EventController {
     return "list";
   }
 
-  //    @GetMapping("/add")
-//    public String add(Model model) {
-//        return null;
-//    }
   @RequestMapping(value = "/add", method = RequestMethod.GET)
   public String addEventForm(Model model) {
     Event event = new Event();
@@ -49,4 +45,9 @@ public class EventController {
     return "add";
   }
 
+  @RequestMapping(value = "/cities", method = RequestMethod.GET)
+  public String checkCitiesList(Model model) {
+    model.addAttribute("listOfCity", eventService.getListOfCity());
+    return "cities";
+  }
 }

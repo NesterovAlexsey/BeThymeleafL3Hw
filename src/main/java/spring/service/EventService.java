@@ -23,4 +23,12 @@ public class EventService {
     public void add(Event event) {
         events.add(event);
     }
+
+    public List<String> getListOfCity() {
+        List<String> listOfCity = new ArrayList<>();
+        for (Event i : events) {
+            listOfCity.add(i.getCity());
+        }
+        return listOfCity;
+    }
 }
